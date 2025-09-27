@@ -103,3 +103,94 @@ else:
         print("SOCIAL POINTS INCREASED BY 5!!")
     else:
         print("GPA DIDN'T GO UP — NO PAIN, NO GAIN (STRESS LEVEL WASN'T LOW ENOUGH)")
+        
+#Test 4 prints
+#Added after Commit 6
+Route2_List = ["Go to the party",
+              "Stay home",
+              "Stay home and drink with friends",
+              "Drink and then go to the party"
+              ]
+print("First Decision: Theres an Exam tommorrow what will you do?")
+print(f"[0]{Route2_List[0]}")
+print(f"[1]{Route2_List[1]}")
+print(f"[2]{Route2_List[2]}")
+print(f"[3]{Route2_List[3]}")
+print("----------------------------------")
+Route2_choice = int(input())
+if Route2_choice not in [0, 1, 2, 3]:
+        print("Invalid Choice: Decide again.")
+if Route2_choice == 0:
+    print("----------------------------------")
+    print("Go to the party")
+    print("You get to the party and realize you dont have enough money and get laughed at by your friends")
+    social_points -= 15
+    stress_level += 30
+    print("SOCIAL POINTS DECREASED BY 15. HOW HORRIBLE!!")
+    print("STRESS LEVEL INCREASED BY 30")
+    print(f'{social_points:.2f}')
+    print(f'{stress_level:.2f}')
+elif Route2_choice == 1:
+    print("----------------------------------")
+    print("Stay home")
+    print("You stay home and watch tv with your rommate and do whatever work is due in the future")
+    social_points += 5
+    study_hours += 2
+    stress_level -= 20
+    print("SOCIAL POINTS INCREASED BY 5!!")
+    print("STUDY HOURS INCREASED BY 2!!")
+    print("STRESS LEVEL DROPPED BY 20 (DUE TO IT BEING KIND OF RELAXING)")
+    print(f'{social_points:.2f}')
+    print(f'{study_hours:.2f}')
+    print(f'{stress_level:.2f}')
+elif Route2_choice == 2:
+    print("----------------------------------")
+    print("Stay home and drink with friends")
+    print("You and your friends get into an argument while drunk and they beat you up.")
+    social_points -= 25
+    stress_level += 20
+    print("SOCIAL POINTS DESCREASED BY 25!!")
+    print("STRESS LEVEL INCREASED BY 20")
+    print(f'{social_points:.2f}')
+    print(f'{stress_level:.2f}')
+elif Route2_choice == 3:
+    print("----------------------------------")
+    print("Drink and then go to the party")
+    print("Due to drinking before the party you dont remember much but checking your phone it looks like you had a good time")
+    social_points += 5
+    study_hours -= 2
+    stress_level += 20
+    print("SOCIAL POINTS INCREASED BY 5!!")
+    print("STUDY HOURS DECREASED BY 2(DUE TO THE HEADACHE THE NEXT DAY)")
+    print("STRESS LEVEL INCREASED BY 20(DUE TO YOU NOT KNOWING WHAT HAPPENED THAT NIGHT")
+    print(f'{social_points:.2f}')
+    print(f'{study_hours:.2f}')
+    print(f'{stress_level:.2f}')
+print("----------------------------------")
+print("FINAL RESULTS")
+print(f'Current GPA: {current_gpa:.2f}')
+print(f'Study Hours: {study_hours}')
+print(f'Social Points: {social_points}')
+print(f'Stress Level: {stress_level}')
+
+#Different Endings
+if current_gpa >= 3.5:
+    if stress_level <= 40:
+        print("Sochlar Ending: You aced your semester! Balanced, calm, and thriving.(There is 8 endings try to find all of them)")
+    elif stress_level > 40 and stress_level <= 70:
+        print("Average student Ending 2: Strong grades, but you're feeling the pressure. Take a break!(There is 8 endings try to find all of them)")
+    else:
+        print("Good student Ending 3: High achiever, but you're burned out. Be careful next semester. (There is 8 endings try to find all of them)")
+elif 2.5 <= current_gpa < 3.5:
+    if study_hours >= 8 and social_points >= 50:
+        print("decent student Ending 4: You're doing fine! A little more effort and you'll be a star.(There is 8 endings try to find all of them)")
+    else:
+        print("Mid student Ending 5: You're doing okay, but you're not reaching your full potential.(There is 8 endings try to find all of them)")
+else:
+    if stress_level > 80:
+        print("BAD Ending 6: You're overwhelmed and failing. Consider asking for help.(There is 8 endings try to find all of them)")
+    elif social_points < 20:
+        print("Loner Ending 7: You're isolated and struggling. Try reaching out more.(There is 8 endings try to find all of them)")
+    else:
+        print("C's get Degrees Ending 8: You barely made it through. Let's do better next time.(There is 8 endings try to find all of them)")
+
